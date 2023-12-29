@@ -16,7 +16,7 @@ struct PersonsListView: View {
                 NavigationLink {
                     DetailView(person: person)
                 } label: {
-                    Text(person.getFullName())
+                    Text(person.fullName)
                 }
 
             }
@@ -27,5 +27,5 @@ struct PersonsListView: View {
 }
 
 #Preview {
-    PersonsListView(persons: DataStore.shared.getData())
+    PersonsListView(persons: Person.getData())
 }

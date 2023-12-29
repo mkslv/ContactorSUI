@@ -17,13 +17,13 @@ struct DetailView: View {
                 Label(person.phone, systemImage: "phone")
                 Label(person.email, systemImage: "tray.full")
             }
-            .navigationTitle(person.getFullName())
+            .navigationTitle(person.fullName)
         }
     }
 }
 
 #Preview {
-    DetailView(person: DataStore.shared.getData()[0])
+    DetailView(person: Person.getData()[0])
 }
 
 

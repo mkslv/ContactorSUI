@@ -13,7 +13,7 @@ struct InfoView: View {
     var body: some View {
         NavigationStack {
             List(persons) { person in
-                Section(person.getFullName()) {
+                Section(person.fullName) {
                     Label(person.phone, systemImage: "phone")
                     Label(person.email, systemImage: "tray.full")
                 }
@@ -25,5 +25,5 @@ struct InfoView: View {
 }
 
 #Preview {
-    InfoView(persons: DataStore.shared.getData())
+    InfoView(persons: Person.getData())
 }

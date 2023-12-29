@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct InitialView: View {
-    private let persons = DataStore.shared.getData()
+    private let persons = Person.getData()
     
     var body: some View {
         TabView {
